@@ -9,40 +9,52 @@ year = int(input("Pease enter the year number: "))
 
 
 if month == 1:
-    month_1 = January
+    month_1 = "January"
 elif month == 2:
-    month_1 = February
+    month_1 = "February"
 elif month == 3:
-    month_1 = March
+    month_1 = "March"
 elif month == 4:
-    month_1 = April
+    month_1 = "April"
 elif month == 5:
-    month_1 = May
+    month_1 = "May"
 elif month == 6:
-    month_1 = June
+    month_1 = "June"
 elif month == 7:
-    month_1 = July
+    month_1 = "July"
 elif month == 8:
-    month_1 = August
+    month_1 = "August"
 elif month == 9:
-    month_1 = September
+    month_1 = "September"
 elif month == 10:
-    month_1 = October
+    month_1 = "October"
 elif month == 11:
-    month_1 = November
+    month_1 = "November"
 elif month == 12:
-    month_1 = December
+    month_1 = "December"
 else:
     print("the month you entered is not valid")
 
-if day == 1 or 21 or 31 :
+if day == 1 :
     day_expression = "st"
 
-elif day == 2 or 22 :
+elif day ==  21  :
+    day_expression = "st"
+
+elif day ==  31 :
+    day_expression = "st"
+
+elif day == 2 :
+    day_expression = "nd"
+elif day == 22 :
     day_expression = "nd"
 
-elif day == 3 or 23 :
+elif day == 3 :
     day_expression = "rd"
+
+elif day == 23 :
+    day_expression = "rd"
+    
 
 elif day > 31 :
     print("The day you have entered is not valid")
@@ -51,17 +63,19 @@ else:
     day_expression = "th"
 
 if 30 < year < 100 :
-    pre_year = 19
+    pre_year = "19"
 
 elif year > 99:
     print("The year you have entered is not valid")
 
 else:
-    pre_year = 20
+    pre_year = "20"
+    if year <10:
+        pre_year = "200"
 
-print(" The date you have entered is {0){1} {3} {4)".format(day,day_expression
-
-
+print(" The date you have entered is {0}{1}".format(day,day_expression))
+print("{0}".format(month_1))
+print("{0}{1}".format(pre_year,year))
 
 
     
