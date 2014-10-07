@@ -25,6 +25,9 @@ elif binary[6]== 1:
 elif binary[7] == 1:
       ones +=1
 
+if int(1) == even:
+      print("this binary number uses even parity")
 
+else:
+      print("this binary number is not even parity")
 
-print (ones)
